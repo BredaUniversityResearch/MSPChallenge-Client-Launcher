@@ -4,6 +4,7 @@ MSP-Challenge Client Launcher
 This program can launch multiple MSP-Challenge clients keeping the memory usage under a certain limit.
 It will pass any unknown arguments to the MSP-Challenge client, so you can pass client command line arguments, e.g.:
   MSPChallenge_Client_Launcher --num-clients=20 Team=Admin User=marin Password=test ServerAddress=http://localhost ConfigFileName=North_Sea_basic AutoLogin=1
+-------------------------------
 MSPChallenge-Client-Launcher 1.0.0+b6fd5a1897f71429f557d38d1ac82fa226a34cf0
 Copyright (C) 2025 MSPChallenge-Client-Launcher
 
