@@ -112,6 +112,12 @@ internal static class Program
             }
         }
         
+        if (processIds.Count == 0)
+        {
+            Console.WriteLine("No clients were launched.");
+            return;
+        }
+        
         // Start a thread to update the console text with current memory usage
         var updateThread = new Thread(() =>
         {
