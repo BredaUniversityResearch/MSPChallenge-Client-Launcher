@@ -38,7 +38,9 @@ internal static class Program
     private static void Main(string[] args)
     {
         Console.WriteLine("MSP-Challenge Client Launcher");
-        Console.WriteLine("Example calls:");
+        Console.WriteLine("-------------------------------");
+        Console.WriteLine("This program can launch multiple MSP-Challenge clients keeping the memory usage under a certain limit.");
+        Console.WriteLine("It will pass any unknown arguments to the MSP-Challenge client, so you can pass client command line arguments, e.g.:");
         Console.WriteLine("  MSPChallenge_Client_Launcher --num-clients=20 Team=Admin User=marin Password=test ServerAddress=http://localhost ConfigFileName=North_Sea_basic AutoLogin=1");
         Parser.Default.ParseArguments<Options>(args)
             .WithParsed(opts => RunOptions(opts, args))
