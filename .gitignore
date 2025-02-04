@@ -1,0 +1,14 @@
+# Build results
+bin/
+obj/
+
+# Rider project files
+.idea/
+*.DotSettings.user
+
+# VS project files
+.vs/
+*.csproj.user
+
+# User-specific files
+.env.local
