@@ -1,4 +1,4 @@
-Can the app with argument --help to see:
+Call the app with argument --help to see:
 
 ```
 MSP-Challenge Client Launcher
