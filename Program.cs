@@ -74,7 +74,10 @@ internal static class Program
 
         // Get the properties of the Options class
         var optionProperties = typeof(Options).GetProperties(BindingFlags.Public | BindingFlags.Instance)
-                                              .Select(p => p.Name.ToLower().Replace('_', '-'));
+                                              .Select(p => p.GetCustomAttribute<OptionAttribute>()?.LongName)
+                                              .Where(name => name != null)
+                                              .Select(name => name!.ToLower())
+                                              .ToList();
 
         // Filter out the arguments that match the properties of the Options class
         var filteredArgs = args.Where(arg => !optionProperties.Any(opt => arg.StartsWith($"--{opt}"))).ToArray();
